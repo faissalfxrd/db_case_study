@@ -1,0 +1,38 @@
+Notizen: 
+
+	-> Bahnhöfe werden von ICs und ICES angefahren. 
+
+	-> jeder Bahnhof hat einen eindeutigen zwei-sechstwelligen Kurzbezeichner DS100-Code 
+
+	-> Liste die von Fernverkehr angefahren werden sind in der Spalte VERKEHR MIT FV markiert 
+
+
+
+	Ziel: 
+
+	-> Entfernungsrechner soll programmiert werden. Soll Luftlinie zwischen zwei beliebigen Fernverkehr-Bahnhöfen 		berechnen mittels Längen und breitengrad
+
+	-> Web-Service mit mindestens folgender REST-Schnittstelle GET /api/v1/distance/FF/BLS
+	Antwort soll folgendes JSON Format haben: 
+	{
+ 	 "from": "Frankfurt(Main)Hbf",
+  	"to": "Berlin Hbf",
+  	"distance": 423,			-> distance soll auf ganze Kilometer gerundet werden 
+  	"unit": "km"
+	}
+
+Implementierung: 
+
+	Programmiersprache -> GOLANG 
+	Frameworks -> Gorilla Mux 
+	
+	-> REST Schnittstellen:
+	GET /api/v1/distance/{station1}/{station2}
+	
+	-> sql lite database benutzen oder csv
+	key: DS100-Code
+
+	
+ 
+
+	
